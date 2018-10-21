@@ -3,20 +3,21 @@ import logo from './logo.svg';
 import './App.css';
 import $ from 'jquery';
 
+
 class App extends Component {
 
   state = {
-    welcomeText: "Welcome to React"
+    welcomeText: "Medical Database"
   };
 
   componentDidMount() {
     $.ajax({
       context: this,
-      url: "core/",
+      url: "hello/",
       method: "GET",
       data: {},
       success: function (data) {
-        this.setState({welcomeText:data})
+        this.setState({welcomeText:data});
         console.log(data);
       },
       error: function (xhr, textStatus, error) {
